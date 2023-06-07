@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <ImageView
+        android:layout_width="295dp"
+        android:layout_height="130dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="59dp"
+        android:src="@drawable/nudmhor_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="212dp"
+        android:layout_marginLeft="-15dp"
+        android:fontFamily="@font/prompt_medium"
+        android:text="เข้าสู่ระบบ"
+        android:textColor="#000000"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="35dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginLeft="-15dp"
+        android:fontFamily="@font/prompt_regular"
+        android:text="อีเมล"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.263"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edittext_email"
+        android:layout_width="264dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="296dp"
+        android:layout_marginLeft="-15dp"
+        android:background="@drawable/shape_edittext_box"
+        android:paddingStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.605"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="55dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="364dp"
+        android:layout_marginLeft="-15dp"
+        android:fontFamily="@font/prompt_regular"
+        android:text="รหัสผ่าน"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.278"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edittext_password"
+        android:layout_width="264dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="396dp"
+        android:layout_marginLeft="-15dp"
+        android:background="@drawable/shape_edittext_box"
+        android:paddingStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.605"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_register"
+        android:layout_width="115dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="492dp"
+        android:layout_marginLeft="-5dp"
+        android:background="@drawable/shape_button"
+        android:fontFamily="@font/prompt_regular"
+        android:text="สมัครสมาชิก"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_login"
+        android:layout_width="115dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="492dp"
+        android:layout_marginLeft="-35dp"
+        android:background="@drawable/shape_button"
+        android:fontFamily="@font/prompt_regular"
+        android:text="เข้าสู่ระบบ"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.804"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

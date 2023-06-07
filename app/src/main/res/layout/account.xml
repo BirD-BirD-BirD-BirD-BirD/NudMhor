@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Account">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="203dp"
+        android:layout_height="73dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/nudmhor_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/shape_account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="140dp"
+        android:background="@drawable/shape_portrait"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:layout_width="203dp"
+        android:layout_height="73dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="2dp"
+        android:src="@drawable/account_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textview_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="225dp"
+        android:layout_marginLeft="2dp"
+
+        android:textSize="14dp"
+        android:fontFamily="@font/prompt_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/textview_birthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="245dp"
+        android:layout_marginLeft="2dp"
+        android:textSize="14dp"
+
+        android:fontFamily="@font/prompt_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="280dp"
+        android:layout_marginLeft="-240dp"
+        android:textSize="14dp"
+        android:text="ชื่อ"
+        android:fontFamily="@font/prompt_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/edittext_name"
+        android:layout_width="269dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="278dp"
+        android:layout_marginLeft="-15dp"
+
+        android:paddingStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.605"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="330dp"
+        android:layout_marginLeft="-230dp"
+        android:textSize="14dp"
+        android:text="เพศ"
+        android:fontFamily="@font/prompt_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/edittext_sex"
+        android:layout_width="269dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="332dp"
+        android:layout_marginLeft="-15dp"
+
+        android:paddingStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.605"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="380dp"
+        android:layout_marginLeft="-130dp"
+        android:textSize="14dp"
+        android:text="รหัสประจำตัวประชาชน"
+        android:fontFamily="@font/prompt_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/edittext_id_number"
+        android:layout_width="269dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="382dp"
+        android:layout_marginLeft="-15dp"
+
+        android:paddingStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.605"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="430dp"
+        android:layout_marginLeft="-180dp"
+        android:textSize="14dp"
+        android:text="เบอร์โทรศัพท์"
+        android:fontFamily="@font/prompt_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/edittext_phone_number"
+        android:layout_width="269dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="430dp"
+        android:layout_marginLeft="-15dp"
+
+        android:paddingStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.605"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="480dp"
+        android:layout_marginLeft="-230dp"
+        android:textSize="14dp"
+        android:text="ที่อยู่"
+        android:fontFamily="@font/prompt_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/edittext_address"
+        android:layout_width="269dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="480dp"
+        android:layout_marginLeft="-15dp"
+
+        android:paddingStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.605"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_change_account_info"
+        android:layout_width="135dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="530dp"
+        android:layout_marginLeft="60dp"
+        android:background="@drawable/shape_button"
+        android:fontFamily="@font/prompt_regular"
+        android:text="แก้ไขข้อมูลส่วนตัว"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="390dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="-17dp"
+        android:layout_marginTop="590dp"
+        android:background="@drawable/bartab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_main"
+        android:layout_width="36dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="595dp"
+        android:layout_marginLeft="-1020dp"
+        android:background="@drawable/main_icon_fade"
+        android:fontFamily="@font/prompt_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.804"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="15dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="620dp"
+        android:fontFamily="@font/prompt_regular"
+        android:text="หน้าหลัก"
+        android:textColor="#686868"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_appointment_history"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="598dp"
+        android:layout_marginLeft="-480dp"
+        android:background="@drawable/appointment_history_icon_fade"
+        android:fontFamily="@font/prompt_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.804"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="15dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="620dp"
+        android:fontFamily="@font/prompt_regular"
+        android:text="ประวัติการจอง"
+        android:textColor="#686868"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_account"
+        android:layout_width="40dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="598dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/account_icon"
+        android:fontFamily="@font/prompt_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.804"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="15dp"
+        android:layout_marginLeft="265dp"
+        android:layout_marginTop="620dp"
+        android:fontFamily="@font/prompt_regular"
+        android:text="บัญชี"
+        android:textColor="#96C9BA"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

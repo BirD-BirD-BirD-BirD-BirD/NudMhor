@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "790425664104",
+    "project_id": "nudmhor-f2168",
+    "storage_bucket": "nudmhor-f2168.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:790425664104:android:5bb55795f846d48ef819dd",
+        "android_client_info": {
+          "package_name": "com.example.nudmhor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "790425664104-radbhclqodmghc45t9q71thugpk8v0hj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nudmhor",
+            "certificate_hash": "6d979768132624b792ec244c60bf883b5e8003a7"
+          }
+        },
+        {
+          "client_id": "790425664104-o4il5pf0melh1h8eiv2479eddh7jpq28.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvtXzGSun1Nm_SUanQof4fACPLSyormbE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "790425664104-o4il5pf0melh1h8eiv2479eddh7jpq28.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Appointment_History">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="203dp"
+        android:layout_height="73dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/nudmhor_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="96dp"
+        android:fontFamily="@font/prompt_regular"
+        android:text="ประวัติการจอง"
+        android:textColor="#607D85"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="320dp"
+        android:layout_height="6dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/shape_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.429"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="390dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="-17dp"
+        android:layout_marginTop="590dp"
+        android:background="@drawable/bartab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_main"
+        android:layout_width="37dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="595dp"
+        android:layout_marginLeft="-1010dp"
+        android:background="@drawable/main_icon_fade"
+        android:fontFamily="@font/prompt_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.804"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="15dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="620dp"
+        android:fontFamily="@font/prompt_regular"
+        android:text="หน้าหลัก"
+        android:textColor="#686868"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_appointment_history"
+        android:layout_width="36dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="595dp"
+        android:layout_marginLeft="-480dp"
+        android:background="@drawable/appointment_icon"
+        android:fontFamily="@font/prompt_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.804"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="15dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="620dp"
+        android:fontFamily="@font/prompt_regular"
+        android:text="ประวัติการจอง"
+        android:textColor="#96C9BA"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_account"
+        android:layout_width="40dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="598dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/account_icon_fade"
+        android:fontFamily="@font/prompt_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.804"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="15dp"
+        android:layout_marginLeft="265dp"
+        android:layout_marginTop="620dp"
+        android:fontFamily="@font/prompt_regular"
+        android:text="บัญชี"
+        android:textColor="#686868"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id = "@+id/appointment_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="130dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
