@@ -1,5 +1,7 @@
 package com.example.nudmhor;
 
+import com.google.firebase.firestore.PropertyName;
+
 public class Appointment {
     private String Age;
     private String Date;
@@ -26,43 +28,52 @@ public class Appointment {
         this.symptom_description = symptom_description;
         this.user_id = user_id;
     }
-
+    @PropertyName("Age")
     public String getAge() {
         return Age;
     }
 
+    @PropertyName("Date")
     public String getDate() {
         return Date;
     }
 
+    @PropertyName("Height")
     public String getHeight() {
         return Height;
     }
 
+    @PropertyName("Queue")
     public String getQueue() {
         return Queue;
     }
 
+    @PropertyName("Weight")
     public String getWeight() {
         return Weight;
     }
 
+    @PropertyName("clinic_id")
     public String getClinic_id() {
         return clinic_id;
     }
 
+    @PropertyName("clinic_treatment")
     public String getClinic_treatment() {
         return clinic_treatment;
     }
 
+    @PropertyName("doctor_id")
     public String getDoctor_id() {
         return doctor_id;
     }
 
+    @PropertyName("symptom_description")
     public String getSymptom_description() {
         return symptom_description;
     }
 
+    @PropertyName("user_id")
     public String getUser_id() {
         return user_id;
     }

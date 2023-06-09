@@ -75,6 +75,21 @@ public class Date extends AppCompatActivity {
         appointment_history = findViewById(R.id.button_appointment_history);
         account = findViewById(R.id.button_account);
 
+
+        db.collection("Users").document(uID).get().addOnCompleteListener(task -> {
+            if(task.isSuccessful()){
+                DocumentSnapshot document = task.getResult();
+                if(document.exists()){
+                    String name = document.getString("name");
+                    textView_name.setText(name);
+                }
+            }else{
+                String name = "Dafault Name";
+                textView_name.setText(name);
+                Log.d("Main","Error can't get data from user");
+            }
+        });
+
         db.collection("Clinic").document(chosen_clinic).get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
                 DocumentSnapshot document = task.getResult();
@@ -196,6 +211,15 @@ public class Date extends AppCompatActivity {
         });
 
         account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent to_Account = new Intent(Date.this,Account.class);
+                to_Account.putExtra("uID",uID);
+                startActivity(to_Account);
+            }
+        });
+
+        account_edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent to_Account = new Intent(Date.this,Account.class);

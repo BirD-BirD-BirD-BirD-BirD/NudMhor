@@ -19,42 +19,19 @@ public class Appointment_History extends AppCompatActivity {
     String uID;
     Adapter adapter;
     Button main,account;
-    @Override
-    protected void onStart() {
-        super.onStart();
-        adapter.startListening();
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        adapter.stopListening();
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.appointment_history);
 
+        //The
         Intent intent = getIntent();
         uID = intent.getStringExtra("uID");
 
-        //Log.d("Appointment_History",uID);
+        Log.d("Appointment_History",uID);
 
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-
-        Query query = db.collection("Appointment").whereEqualTo("user_id",uID);
-
-        FirestoreRecyclerOptions<Appointment> options = new FirestoreRecyclerOptions.Builder<Appointment>()
-                .setQuery(query, Appointment.class)
-                .build();
-
-        adapter = new Adapter(options);
-
-        RecyclerView recyclerView = findViewById(R.id.appointment_recyclerview);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(adapter);
+        setUpRecyclerView(uID);
 
         main = findViewById(R.id.button_main);
         account = findViewById(R.id.button_account);
@@ -93,5 +70,17 @@ public class Appointment_History extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        adapter.startListening();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        adapter.stopListening();
     }
 }

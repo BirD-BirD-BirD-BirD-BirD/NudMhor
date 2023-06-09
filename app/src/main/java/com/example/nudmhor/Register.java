@@ -88,6 +88,8 @@ public class Register extends AppCompatActivity {
                                                     @Override
                                                     public void onSuccess(Void unused) {
                                                         Log.d("Register", "DocumentSnapshot successfully written!");
+                                                        Intent to_login = new Intent(Register.this,Login.class);
+                                                        startActivity(to_login);
                                                     }
                                                 })
                                                 .addOnFailureListener(new OnFailureListener() {
@@ -104,9 +106,6 @@ public class Register extends AppCompatActivity {
                                     }
                                 }
                             });
-
-                    Intent to_login = new Intent(Register.this,Login.class);
-                    startActivity(to_login);
                 }
             }
         });

@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -19,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Time extends AppCompatActivity {
+    TextView textView_name,account_edit;
     FirebaseFirestore db;
     String uID;
     String chosen_clinic;
@@ -49,6 +51,22 @@ public class Time extends AppCompatActivity {
         next = findViewById(R.id.button_next);
         appointment_history = findViewById(R.id.button_appointment_history);
         account = findViewById(R.id.button_account);
+        account_edit = findViewById(R.id.account_edit);
+        textView_name = findViewById(R.id.textview_name);
+
+        db.collection("Users").document(uID).get().addOnCompleteListener(task -> {
+            if(task.isSuccessful()){
+                DocumentSnapshot document = task.getResult();
+                if(document.exists()){
+                    String name = document.getString("name");
+                    textView_name.setText(name);
+                }
+            }else{
+                String name = "Dafault Name";
+                textView_name.setText(name);
+                Log.d("Main","Error can't get data from user");
+            }
+        });
 
         db.collection("Doctor").document(chosen_doctor).get().addOnCompleteListener(task -> {
             if(task.isSuccessful()){
@@ -101,6 +119,15 @@ public class Time extends AppCompatActivity {
         });
 
         account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent to_Account = new Intent(Time.this,Account.class);
+                to_Account.putExtra("uID",uID);
+                startActivity(to_Account);
+            }
+        });
+
+        account_edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent to_Account = new Intent(Time.this,Account.class);
