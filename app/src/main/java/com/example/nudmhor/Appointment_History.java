@@ -25,9 +25,10 @@ public class Appointment_History extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.appointment_history);
 
-        //The
+
         Intent intent = getIntent();
         uID = intent.getStringExtra("uID");
+        //uID = "lZlrigqRkZfcZk5pEo5yfVaUmXr2";
 
         Log.d("Appointment_History",uID);
 
@@ -67,7 +68,7 @@ public class Appointment_History extends AppCompatActivity {
         adapter = new Adapter(options);
 
         RecyclerView recyclerView = findViewById(R.id.appointment_recyclerview);
-        recyclerView.setHasFixedSize(true);
+        //recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
     }

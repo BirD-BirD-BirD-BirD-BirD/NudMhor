@@ -78,5 +78,5 @@ public class Appointment {
         return user_id;
     }
 
-    public String getDate_Queue(){return getDate()+getQueue();}
+    public String getDate_Queue(){return getDate()+ " " + getQueue();}
 }
