@@ -227,6 +227,5 @@ public class Date extends AppCompatActivity {
                 startActivity(to_Account);
             }
         });
-
     }
 }

@@ -1,5 +1,6 @@
 package com.example.nudmhor;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -13,8 +14,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -73,8 +77,9 @@ public class Time extends AppCompatActivity {
                 DocumentSnapshot document = task.getResult();
 
                 List<String> doctor_queue = (List<String>) document.get("Queue");
+                List<String> availableQueue = available_queue(doctor_queue,chosen_date);
 
-                ArrayAdapter<String> adapter = new ArrayAdapter<>(Time.this, android.R.layout.simple_spinner_dropdown_item, doctor_queue);
+                ArrayAdapter<String> adapter = new ArrayAdapter<>(Time.this, android.R.layout.simple_spinner_dropdown_item, availableQueue);
                 queue.setAdapter(adapter);
             }else {
                 Log.d("Time", "Error can't get data from doctor");
@@ -135,5 +140,19 @@ public class Time extends AppCompatActivity {
                 startActivity(to_Account);
             }
         });
+    }
+
+    private List<String> available_queue(List<String> doctor_queue, String chosen_date){
+        List<String> new_queue = doctor_queue;
+        db.collection("Appointment").get().addOnCompleteListener(task -> {
+            if(task.isSuccessful()){
+                for(QueryDocumentSnapshot document : task.getResult()){
+                    if(document.getString("Date").equals(chosen_date) && doctor_queue.contains(document.getString("Queue"))){
+                        new_queue.remove(document.getString("Queue"));
+                    }
+                }
+            }
+        });
+        return new_queue;
     }
 }
