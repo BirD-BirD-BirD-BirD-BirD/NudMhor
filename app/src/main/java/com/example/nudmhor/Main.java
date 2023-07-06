@@ -76,10 +76,10 @@ public class Main extends AppCompatActivity {
             if(task.isSuccessful()){
                 List<String> clinic_list = new ArrayList<>();
 
-                String option = "";
+                //String option = "";
 
                 for(QueryDocumentSnapshot document : task.getResult()){
-                    option = option.concat(document.getString("name"))
+                    String option = document.getString("name")
                             .concat("(")
                             .concat(document.getString("treatment"))
                             .concat(")");
